@@ -3,11 +3,14 @@
  * We exist outside the entityManager
  */
 
-function PlayerProto(){
+function PlayerProto(config){
+  entities.Character.call(this, config);
 }
+
+PlayerProto.prototype = Object.create(entities.Character.prototype);
 
 //TODO roll stats
 //TODO classes?
-PlayerProto.prototype = new entities.Character();
+
 //create ourselves
-window.Player = new PlayerProto();
+window.Player = new PlayerProto({name: 'Player', description: 'A being of pure energy'});

@@ -19,7 +19,7 @@ gulp.task('serve', ['core', 'scene'], function(){
 });
 
 gulp.task('core', function(){
-  gulp.src(['src/core/EntityManager.js', 'src/core/App.js', 'src/core/*.js']).pipe(concat('core.js')).pipe(gulp.dest('src/'));
+  gulp.src(['src/core/EntityManager.js', 'src/core/App.js', 'src/core/Entity.js', 'src/core/Item.js', 'src/core/*.js']).pipe(concat('core.js')).pipe(gulp.dest('src/'));
 });
 
 gulp.task('scene', function(){

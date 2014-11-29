@@ -3,13 +3,6 @@
  */
 
 entities.Item = function(config){
-
-  if(!config){
-    throw Error('Failed to configure item!');
-    return false;
-  }
-
+  this.prototype = new entities.Base(config);
   this.stackable = false; //can this be allowed to stack?
 };
-
-entities.Item.prototype = entities.Base;
