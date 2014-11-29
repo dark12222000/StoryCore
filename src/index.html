@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Core</title>
+  <link rel="stylesheet" href="vendor/foundation.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name"><h1><a href="#">Story Core</a></h1></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="has-dropdown not-click">
+          <a href="#">Data</a>
+          <ul class="dropdown">
+            <li><a href="#">Save</a></li>
+            <li><a href="#">Load</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <div class="row" id="primary">
+    <div class="small-12 columns" id="text"></div>
+    <div class="small-12 columns" id="controls"></div>
+  </div>
+  <script src="vendor/jquery.js"></script>
+  <script src="vendor/foundation.js"></script>
+  <script src="vendor/handlebars.js"></script>
+  <script src="vendor/lodash.compat.js"></script>
+  <script src="core.js"></script>
+  <script src="scenes.js"></script>
+  <script>
+    Core.init();
+  </script>
+</body>
+</html>

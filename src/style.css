@@ -1,0 +1,14 @@
+button {
+  margin-right: 20px;
+}
+
+#primary {
+  height: 80%;
+}
+#text {
+  min-height: 40%;
+  max-height: 60%;
+  height: 50%;
+  padding-top: 25px;
+  overflow-y: scroll;
+}
