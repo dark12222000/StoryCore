@@ -8,7 +8,6 @@ entities.Character = function(config){
   if(!config){
     config = {};
   }
-  this.prototype = entities.Base;
   // PROPS
   this.gender = Gender.neuter; //We always need a gender
   this.species = 'human'; //TODO make species configurable
@@ -40,6 +39,8 @@ entities.Character = function(config){
   //TODO hair
   //TODO face - ears, nose, lips
 };
+
+entities.Character.prototype = entities.Base;
 
 entities.Character.prototype.setGender = function(Gender){
   this.gender = Gender;

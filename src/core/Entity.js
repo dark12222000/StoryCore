@@ -8,7 +8,7 @@ entities.Base = function(config){
     throw Error('Failed to configure item!');
     return false;
   }
-
+  this.id = _.uniqueID('ent_');
   this.name = config.name || 'Generic Thing';
   this.description = config.description || 'A pure white smooth block.'; //static text, no template
   this.weight = config.weight || 0;
