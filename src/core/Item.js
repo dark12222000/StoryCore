@@ -3,7 +3,12 @@
  */
 
 entities.Item = function(config){
-  this.weight = config.weight || 0; //Always in kg
+
+  if(!config){
+    throw Error('Failed to configure item!');
+    return false;
+  }
+
   this.stackable = false; //can this be allowed to stack?
 };
 

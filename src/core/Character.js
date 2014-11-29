@@ -12,8 +12,8 @@ entities.Character = function(config){
   // PROPS
   this.gender = Gender.neuter; //We always need a gender
   this.species = 'human'; //TODO make species configurable
-  this.weight = config.weight || 75; //Yes, we have a weight, and yes, it's in kg
-  this.height = config.height || 300; //Yes, it's in cm
+  this.weight = config.weight || 75; //Yes, we have a weight, and yes, it's in kg. We override here to give ourselves a sane default.
+  this.height = config.height || 180; //Yes, it's in cm
   this.health = config.health || 100; //Our current health
   this.max_health = config.max_health || 100; //Our max health at any given point
   // STATS - 10 is a normal human, 5 is a child, 100 is a god.

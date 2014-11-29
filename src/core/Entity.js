@@ -4,8 +4,14 @@
  * but our properties are inherited by EVERYONE
  */
 entities.Base = function(config){
+  if(!config){
+    throw Error('Failed to configure item!');
+    return false;
+  }
+
   this.name = config.name || 'Generic Thing';
   this.description = config.description || 'A pure white smooth block.'; //static text, no template
+  this.weight = config.weight || 0;
 }
 //Set a new name
 entities.Base.prototype.rename = function(newName){
@@ -22,6 +28,10 @@ entities.Base.prototype.describe = function(text){
   }
   this.description = text;
   return true;
+};
+//Get weight
+entities.Item.prototype.getWeight = function(){
+  return this.weight;
 };
 //Normally just return a description, but can be over-ridden for funsies
 entities.Base.prototype.look = function(){
