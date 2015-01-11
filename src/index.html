@@ -27,12 +27,29 @@
     <div class="small-12 columns" id="text"></div>
     <div class="small-12 columns" id="controls"></div>
   </div>
+  <!-- inject:js -->
   <script src="vendor/jquery.js"></script>
+  <script src="vendor/fastclick.js"></script>
   <script src="vendor/foundation.js"></script>
   <script src="vendor/handlebars.js"></script>
+  <script src="vendor/jquery.cookie.js"></script>
+  <script src="vendor/jquery.placeholder.js"></script>
   <script src="vendor/lodash.compat.js"></script>
-  <script src="core.js"></script>
-  <script src="scenes.js"></script>
+  <script src="core/EntityManager.js"></script>
+  <script src="core/App.js"></script>
+  <script src="core/Entity.js"></script>
+  <script src="core/Item.js"></script>
+  <script src="core/Character.js"></script>
+  <script src="core/Container.js"></script>
+  <script src="core/Gender.js"></script>
+  <script src="core/GuiManager.js"></script>
+  <script src="core/Inventory.js"></script>
+  <script src="core/Player.js"></script>
+  <script src="core/SceneLibrary.js"></script>
+  <script src="core/World.js"></script>
+  <script src="scenes/Dawn.js"></script>
+  <script src="scenes/Streets.js"></script>
+  <!-- endinject -->
   <script>
     Core.init();
   </script>

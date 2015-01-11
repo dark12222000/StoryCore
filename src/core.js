@@ -243,7 +243,7 @@ Inventory = function(config){
   }
   this.maxWeight = config.maxWeight || 25; //default to about a small chest. Set to 0 to ignore.
   this.maxItems = config.maxItems || 10; //you can max out in either amounts or weight (or both). Set to 0 to ignore.
-  this.acceptsType = config.acceptsType || entities.Item; //Use this if you want to restrict the types that can be added. Set to null to ignore.
+  this.acceptsType = config.acceptsType || entities.Item.prototype; //Use this if you want to restrict the types that can be added. Set to null to ignore.
   this.inventory = config.contents || [];
 }
 
@@ -309,6 +309,7 @@ Inventory.prototype.transferTo = function(itemId, Inv){
 
 function PlayerProto(config){
   entities.Character.call(this, config);
+  this.inventory = new Inventory(config);
 }
 
 PlayerProto.prototype = Object.create(entities.Character.prototype);

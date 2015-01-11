@@ -5,6 +5,7 @@
 
 function PlayerProto(config){
   entities.Character.call(this, config);
+  this.inventory = new Inventory(config);
 }
 
 PlayerProto.prototype = Object.create(entities.Character.prototype);
